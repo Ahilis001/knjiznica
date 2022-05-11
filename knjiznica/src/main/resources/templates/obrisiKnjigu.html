@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "UTF8" />
+      <title>Spring Boot Application</title>
+   </head>
+   <body>
+      <h4>Obriši knjigu.</h4>
+   </body>
+   <table>
+    <thead>
+        <tr>
+            <th> Naziv </th>
+            <th> Opis </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="knjiga : ${knjige}">
+            <td><span th:text="${knjiga.strKnjigaNaziv}"> Title </span></td>
+            <td><span th:text="${knjiga.strKnjigaOpis}"> Author </span></td>
+            <td><a th:href="@{'/prikaz/knjige/obrisiKnjigu/'+${knjiga.intKnjigaID}}">Obriši knjigu</a></td>
+        </tr>
+    </tbody>
+</table>
+</html>
+
+

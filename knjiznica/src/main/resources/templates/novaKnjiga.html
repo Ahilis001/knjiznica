@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="application/json; charset=UTF-8" />
+<title>Dodavanje nove knjige</title>
+</head>
+<body>
+
+<h4>Dodavanje nove knjige</h4>
+
+	<form action="#" th:action="@{/prikaz/knjige/novaKnjiga}" th:object="${knjiga}" method="post">
+	
+    	<p>Naziv: <input type="text" th:field="*{strKnjigaNaziv}" /></p>
+        <p>Opis: <input type="text" th:field="*{strKnjigaOpis}" /></p>
+        <p><input type="submit" value="Dodaj" /></p>
+    </form>
+</body>
+</html>
